@@ -1,5 +1,40 @@
 """
 STACKS - LIFO (Last In First Out)
+
+THEORY:
+- Linear data structure following LIFO principle
+- Elements added and removed from same end (top)
+- Like a stack of plates - add/remove from top only
+- Can be implemented using arrays or linked lists
+
+OPERATIONS:
+- Push: Add element to top - O(1)
+- Pop: Remove element from top - O(1)
+- Peek/Top: View top element - O(1)
+- isEmpty: Check if empty - O(1)
+
+SPACE COMPLEXITY: O(n)
+
+APPLICATIONS:
+1. Function call stack (recursion)
+2. Expression evaluation (postfix, infix)
+3. Undo/Redo operations
+4. Backtracking algorithms
+5. Browser history
+6. Balanced parentheses checking
+
+COMMON PROBLEMS:
+- Next Greater Element
+- Stock Span Problem
+- Largest Rectangle in Histogram
+- Valid Parentheses
+- Infix to Postfix conversion
+
+WHEN TO USE:
+- Need LIFO access pattern
+- Reversing order
+- Matching pairs (parentheses)
+- Backtracking required
 """
 
 class Stack:

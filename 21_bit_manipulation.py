@@ -1,5 +1,47 @@
 """
 BIT MANIPULATION - Bitwise Operations
+
+THEORY:
+- Operations on binary representation
+- Fast and space efficient
+- Used in optimization and low-level programming
+
+BITWISE OPERATORS:
+- & (AND): Both bits 1 → 1
+- | (OR): Any bit 1 → 1
+- ^ (XOR): Different bits → 1
+- ~ (NOT): Flip bits
+- << (Left Shift): Multiply by 2
+- >> (Right Shift): Divide by 2
+
+COMMON TRICKS:
+1. Check if power of 2: n & (n-1) == 0
+2. Toggle bit: n ^ (1 << i)
+3. Set bit: n | (1 << i)
+4. Clear bit: n & ~(1 << i)
+5. Get bit: (n >> i) & 1
+6. Swap: a ^= b, b ^= a, a ^= b
+7. Count set bits: Brian Kernighan's algorithm
+
+PROPERTIES:
+- a ^ a = 0
+- a ^ 0 = a
+- a & 0 = 0
+- a | 0 = a
+
+APPLICATIONS:
+- Set operations (union, intersection)
+- Subset generation
+- Single number problems
+- Optimization (replace *, / with shifts)
+- Compression
+
+COMMON PROBLEMS:
+- Single Number
+- Power of Two
+- Count Set Bits
+- Reverse Bits
+- Subsets using bitmask
 """
 
 def count_set_bits(n):

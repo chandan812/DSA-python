@@ -1,6 +1,39 @@
 """
 HASHING - Key-Value Storage
-Average Time: Insert O(1), Search O(1), Delete O(1)
+
+THEORY:
+- Maps keys to values using hash function
+- Hash function converts key to array index
+- Provides O(1) average case for insert, search, delete
+- Collision handling: Chaining or Open Addressing
+
+HASH FUNCTION:
+- Converts key to integer (hash code)
+- Maps hash code to array index: index = hash(key) % table_size
+- Good hash function: uniform distribution, deterministic
+
+COLLISION RESOLUTION:
+1. Chaining - Store multiple elements at same index (linked list)
+2. Open Addressing - Find next available slot (linear/quadratic probing)
+
+TIME COMPLEXITY:
+- Average: O(1) for insert, search, delete
+- Worst: O(n) when all keys collide
+
+SPACE COMPLEXITY: O(n)
+
+APPLICATIONS:
+- Database indexing
+- Caching (LRU cache)
+- Symbol tables in compilers
+- Password verification
+- Counting frequencies
+
+COMMON PROBLEMS:
+- Two Sum
+- Subarray with given sum
+- Longest consecutive sequence
+- Group anagrams
 """
 
 class HashTable:

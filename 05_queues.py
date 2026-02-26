@@ -1,6 +1,45 @@
 """
 QUEUES - FIFO (First In First Out)
-Operations: Enqueue O(1), Dequeue O(1)
+
+THEORY:
+- Linear data structure following FIFO principle
+- Elements added at rear, removed from front
+- Like a line of people - first come, first served
+- Can be implemented using arrays or linked lists
+
+OPERATIONS:
+- Enqueue: Add element at rear - O(1)
+- Dequeue: Remove element from front - O(1)
+- Front/Peek: View front element - O(1)
+- isEmpty: Check if empty - O(1)
+
+TYPES:
+1. Simple Queue - Basic FIFO
+2. Circular Queue - Last position connects to first
+3. Priority Queue - Elements have priority
+4. Deque (Double-ended) - Insert/delete from both ends
+
+SPACE COMPLEXITY: O(n)
+
+APPLICATIONS:
+1. CPU scheduling
+2. Disk scheduling
+3. BFS traversal
+4. Print queue
+5. Call center systems
+6. Handling requests in web servers
+
+COMMON PROBLEMS:
+- First non-repeating character in stream
+- Generate binary numbers
+- Sliding window maximum
+- Level order traversal
+
+WHEN TO USE:
+- Need FIFO access pattern
+- Order preservation important
+- BFS algorithms
+- Resource sharing (CPU, printer)
 """
 from collections import deque
 

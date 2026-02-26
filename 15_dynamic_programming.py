@@ -1,6 +1,46 @@
 """
 DYNAMIC PROGRAMMING - Optimization Technique
-Memoization (Top-Down) and Tabulation (Bottom-Up)
+
+THEORY:
+- Solve complex problems by breaking into subproblems
+- Store results to avoid recomputation
+- Optimal substructure + Overlapping subproblems
+
+APPROACHES:
+1. Memoization (Top-Down):
+   - Recursion + Cache
+   - Solve as needed
+   - Natural to write
+
+2. Tabulation (Bottom-Up):
+   - Iterative + Table
+   - Solve all subproblems
+   - Better space optimization
+
+STEPS TO SOLVE:
+1. Define state (dp[i] represents what?)
+2. Find recurrence relation
+3. Identify base cases
+4. Determine computation order
+5. Optimize space if possible
+
+COMMON PATTERNS:
+1. Linear DP - Fibonacci, Climbing Stairs
+2. 2D DP - LCS, Edit Distance, Knapsack
+3. String DP - Palindrome, Pattern Matching
+4. Tree DP - Diameter, Path Sum
+5. Bitmask DP - Subset problems
+
+OPTIMIZATION:
+- Space: Often reduce from 2D to 1D
+- Time: Memoization avoids redundant calls
+
+KEY PROBLEMS:
+- Fibonacci, Climbing Stairs
+- Coin Change, Knapsack
+- LCS, LIS, Edit Distance
+- Matrix Chain Multiplication
+- Subset Sum, Partition
 """
 
 def fibonacci_dp(n):

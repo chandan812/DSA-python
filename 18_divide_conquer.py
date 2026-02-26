@@ -1,5 +1,44 @@
 """
 DIVIDE AND CONQUER - Break into subproblems
+
+THEORY:
+- Break problem into smaller subproblems
+- Solve subproblems recursively
+- Combine solutions
+
+STEPS:
+1. Divide - Break into smaller subproblems
+2. Conquer - Solve subproblems recursively
+3. Combine - Merge solutions
+
+TIME COMPLEXITY:
+Master Theorem: T(n) = aT(n/b) + f(n)
+- a = number of subproblems
+- b = factor by which size reduces
+- f(n) = cost of divide and combine
+
+COMMON ALGORITHMS:
+1. Merge Sort - T(n) = 2T(n/2) + O(n) = O(n log n)
+2. Quick Sort - T(n) = 2T(n/2) + O(n) = O(n log n) avg
+3. Binary Search - T(n) = T(n/2) + O(1) = O(log n)
+4. Strassen's Matrix - O(n^2.807)
+5. Karatsuba Multiplication - O(n^1.585)
+
+DIVIDE & CONQUER vs DP:
+- D&C: Independent subproblems
+- DP: Overlapping subproblems
+
+ADVANTAGES:
+- Efficient algorithms
+- Parallelizable
+- Cache-friendly
+
+COMMON PROBLEMS:
+- Sorting (Merge, Quick)
+- Binary Search
+- Maximum Subarray
+- Closest Pair of Points
+- Count Inversions
 """
 
 def merge_sort(arr):

@@ -1,5 +1,46 @@
 """
 GRAPH ALGORITHMS - Shortest Path, MST
+
+THEORY:
+
+1. DIJKSTRA'S ALGORITHM:
+   - Single source shortest path
+   - Works with non-negative weights
+   - Uses priority queue (min heap)
+   - Time: O((V+E) log V) with heap
+   - Greedy approach
+
+2. BELLMAN-FORD:
+   - Single source shortest path
+   - Handles negative weights
+   - Detects negative cycles
+   - Time: O(V*E)
+   - Dynamic programming approach
+
+3. FLOYD-WARSHALL:
+   - All pairs shortest path
+   - Time: O(V³)
+   - Space: O(V²)
+   - DP approach
+
+4. KRUSKAL'S MST:
+   - Minimum Spanning Tree
+   - Sort edges, use Union-Find
+   - Time: O(E log E)
+   - Greedy approach
+
+5. PRIM'S MST:
+   - Minimum Spanning Tree
+   - Grow tree from single vertex
+   - Time: O(E log V) with heap
+   - Greedy approach
+
+WHEN TO USE:
+- Dijkstra: Non-negative weights, single source
+- Bellman-Ford: Negative weights, detect cycles
+- Floyd-Warshall: All pairs, dense graph
+- Kruskal: Sparse graph, edge-based
+- Prim: Dense graph, vertex-based
 """
 import heapq
 

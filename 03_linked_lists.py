@@ -1,5 +1,40 @@
 """
 LINKED LISTS - Dynamic Linear Data Structure
+
+THEORY:
+- Nodes connected via pointers/references
+- Each node contains data and pointer to next node
+- Dynamic size - grows/shrinks at runtime
+- Non-contiguous memory allocation
+
+TYPES:
+1. Singly Linked List - One pointer (next)
+2. Doubly Linked List - Two pointers (prev, next)
+3. Circular Linked List - Last node points to first
+
+TIME COMPLEXITY:
+- Access: O(n) - Must traverse from head
+- Search: O(n) - Linear traversal
+- Insert at head: O(1)
+- Insert at tail: O(n) without tail pointer, O(1) with tail
+- Delete: O(n) - Need to find node first
+
+SPACE COMPLEXITY: O(n) - Extra space for pointers
+
+ADVANTAGES:
+- Dynamic size
+- Efficient insertion/deletion at beginning
+- No memory waste
+
+DISADVANTAGES:
+- No random access
+- Extra memory for pointers
+- Not cache-friendly
+
+COMMON TECHNIQUES:
+1. Two Pointers (Fast & Slow) - Cycle detection, middle element
+2. Dummy Node - Simplifies edge cases
+3. Recursion - Reversal, traversal
 """
 
 class Node:

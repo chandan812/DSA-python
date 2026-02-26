@@ -1,5 +1,40 @@
 """
 SORTING ALGORITHMS
+
+THEORY:
+- Arranging elements in specific order (ascending/descending)
+- Fundamental operation in computer science
+- Choice depends on data size, memory, stability requirements
+
+COMPARISON-BASED SORTS:
+1. Bubble Sort - O(n²) - Repeatedly swap adjacent elements
+2. Selection Sort - O(n²) - Find minimum, place at beginning
+3. Insertion Sort - O(n²) - Build sorted array one element at a time
+4. Merge Sort - O(n log n) - Divide, sort, merge
+5. Quick Sort - O(n log n) avg - Partition around pivot
+6. Heap Sort - O(n log n) - Use heap data structure
+
+NON-COMPARISON SORTS:
+7. Counting Sort - O(n+k) - Count occurrences
+8. Radix Sort - O(d*n) - Sort by digits
+9. Bucket Sort - O(n+k) - Distribute into buckets
+
+STABILITY:
+- Stable: Maintains relative order of equal elements
+- Stable: Merge, Insertion, Bubble
+- Unstable: Quick, Heap, Selection
+
+IN-PLACE:
+- Modifies input array without extra space
+- In-place: Quick, Heap, Insertion, Selection, Bubble
+- Not in-place: Merge (needs O(n) space)
+
+WHEN TO USE:
+- Small data: Insertion Sort
+- Nearly sorted: Insertion Sort
+- Large data: Quick Sort, Merge Sort
+- Guaranteed O(n log n): Merge Sort, Heap Sort
+- Limited memory: Heap Sort (in-place)
 """
 
 def bubble_sort(arr):

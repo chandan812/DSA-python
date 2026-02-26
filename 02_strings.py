@@ -1,5 +1,29 @@
 """
 STRINGS - Character Array Manipulation
+
+THEORY:
+- Sequence of characters stored as array
+- Immutable in Python (creates new string on modification)
+- Can be indexed, sliced like arrays
+- Common operations: concatenation, substring, pattern matching
+
+TIME COMPLEXITY:
+- Access: O(1)
+- Concatenation: O(n+m)
+- Substring: O(k) where k is substring length
+- Search: O(n*m) naive, O(n+m) with KMP
+
+COMMON TECHNIQUES:
+1. Two Pointers - Palindrome check, reverse
+2. Sliding Window - Longest substring problems
+3. Hashing - Anagram detection, character frequency
+4. Pattern Matching - KMP, Rabin-Karp algorithms
+
+IMPORTANT PATTERNS:
+- Palindrome: Same forwards and backwards
+- Anagram: Same characters, different order
+- Subsequence: Characters in same order, not necessarily contiguous
+- Substring: Contiguous sequence of characters
 """
 
 def reverse_string(s):

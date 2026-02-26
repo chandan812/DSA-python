@@ -1,5 +1,48 @@
 """
 ADVANCED DYNAMIC PROGRAMMING
+
+THEORY:
+
+1. MATRIX CHAIN MULTIPLICATION:
+   - Optimal parenthesization
+   - Minimize scalar multiplications
+   - Time: O(n³), Space: O(n²)
+
+2. EGG DROP PROBLEM:
+   - Find minimum trials to determine critical floor
+   - Classic DP problem
+   - Time: O(n*k²) where n=eggs, k=floors
+
+3. PARTITION PROBLEMS:
+   - Equal Sum Partition
+   - Subset Sum
+   - Minimum Subset Sum Difference
+   - 0/1 Knapsack variant
+
+4. WORD BREAK:
+   - Check if string can be segmented
+   - Dictionary-based DP
+   - Time: O(n²)
+
+5. PALINDROME PARTITIONING:
+   - Minimum cuts for palindrome substrings
+   - 2D DP for palindrome check
+   - Time: O(n²)
+
+6. LONGEST PALINDROMIC SUBSEQUENCE:
+   - LCS of string and its reverse
+   - Time: O(n²)
+
+ADVANCED PATTERNS:
+- Interval DP - Matrix chain, burst balloons
+- Bitmask DP - TSP, subset problems
+- Digit DP - Count numbers with properties
+- Tree DP - Subtree problems
+
+OPTIMIZATION TECHNIQUES:
+- Space: Rolling array
+- Time: Monotonic queue/stack
+- Memoization vs Tabulation trade-offs
 """
 
 def matrix_chain_multiplication(dims):
