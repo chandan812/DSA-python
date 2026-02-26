@@ -1,5 +1,42 @@
 """
 GREEDY ALGORITHMS - Make locally optimal choice
+
+THEORY:
+- Make best choice at each step
+- Hope local optimum leads to global optimum
+- No backtracking - commit to choice
+- Faster than DP but doesn't always work
+
+WHEN GREEDY WORKS:
+1. Greedy Choice Property - Local optimum leads to global
+2. Optimal Substructure - Optimal solution contains optimal subsolutions
+
+GREEDY vs DP:
+- Greedy: Make choice, solve one subproblem
+- DP: Solve all subproblems, choose best
+- Greedy is faster but less general
+
+COMMON PATTERNS:
+1. Activity Selection - Sort by end time
+2. Fractional Knapsack - Sort by value/weight ratio
+3. Huffman Coding - Build tree from frequencies
+4. Job Sequencing - Sort by profit
+5. Minimum Spanning Tree - Kruskal's, Prim's
+
+STEPS:
+1. Sort/organize data
+2. Make greedy choice
+3. Prove it leads to optimal solution
+
+CLASSIC PROBLEMS:
+- Activity Selection
+- Fractional Knapsack
+- Huffman Encoding
+- Job Sequencing
+- Minimum Platforms
+- Coin Change (specific denominations)
+
+NOTE: Greedy doesn't work for 0/1 Knapsack!
 """
 
 def activity_selection(start, finish):

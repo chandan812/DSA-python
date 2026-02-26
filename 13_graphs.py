@@ -1,5 +1,46 @@
 """
 GRAPHS - Vertices and Edges
+
+THEORY:
+- Non-linear data structure: G = (V, E)
+- V = Set of vertices (nodes)
+- E = Set of edges (connections)
+- Can be directed or undirected, weighted or unweighted
+
+REPRESENTATIONS:
+1. Adjacency Matrix - 2D array, O(V²) space
+   - Fast edge lookup: O(1)
+   - Slow to iterate neighbors: O(V)
+2. Adjacency List - Array of lists, O(V+E) space
+   - Slow edge lookup: O(V)
+   - Fast to iterate neighbors: O(degree)
+
+TRAVERSALS:
+1. BFS (Breadth-First Search):
+   - Uses Queue
+   - Level by level
+   - Shortest path in unweighted graph
+   - Time: O(V+E)
+
+2. DFS (Depth-First Search):
+   - Uses Stack/Recursion
+   - Go deep first
+   - Detect cycles, topological sort
+   - Time: O(V+E)
+
+COMMON PROBLEMS:
+- Cycle Detection
+- Topological Sort (DAG)
+- Connected Components
+- Bipartite Check
+- Shortest Path
+- Minimum Spanning Tree
+
+APPLICATIONS:
+- Social networks
+- Maps and navigation
+- Web crawling
+- Network routing
 """
 from collections import deque, defaultdict
 

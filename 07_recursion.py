@@ -1,6 +1,43 @@
 """
 RECURSION - Function calling itself
-Base case + Recursive case
+
+THEORY:
+- Function calls itself with smaller input
+- Must have base case (stopping condition)
+- Recursive case reduces problem size
+- Uses call stack to store function states
+
+COMPONENTS:
+1. Base Case - Stopping condition, returns without recursion
+2. Recursive Case - Calls itself with modified parameters
+3. Progress - Each call moves toward base case
+
+TYPES:
+1. Direct - Function calls itself
+2. Indirect - Function A calls B, B calls A
+3. Tail Recursion - Recursive call is last operation
+
+TIME COMPLEXITY: Depends on number of recursive calls
+SPACE COMPLEXITY: O(n) for call stack depth
+
+ADVANTAGES:
+- Clean, readable code
+- Natural for tree/graph problems
+- Divides complex problems
+
+DISADVANTAGES:
+- Stack overflow risk
+- Higher memory usage
+- Slower than iteration
+
+OPTIMIZATION:
+- Memoization - Cache results (Top-Down DP)
+- Tail recursion - Can be optimized to iteration
+
+COMMON PATTERNS:
+- Divide and Conquer
+- Backtracking
+- Tree/Graph traversal
 """
 
 def factorial(n):

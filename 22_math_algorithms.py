@@ -1,5 +1,47 @@
 """
 MATH ALGORITHMS - Number Theory
+
+THEORY:
+
+1. GCD (Greatest Common Divisor):
+   - Euclidean Algorithm: O(log min(a,b))
+   - gcd(a,b) = gcd(b, a%b)
+
+2. LCM (Least Common Multiple):
+   - lcm(a,b) = (a*b) / gcd(a,b)
+
+3. PRIME NUMBERS:
+   - Only divisible by 1 and itself
+   - Trial Division: O(√n)
+   - Sieve of Eratosthenes: O(n log log n)
+
+4. PRIME FACTORIZATION:
+   - Express n as product of primes
+   - Time: O(√n)
+
+5. MODULAR ARITHMETIC:
+   - (a+b) % m = ((a%m) + (b%m)) % m
+   - (a*b) % m = ((a%m) * (b%m)) % m
+   - Fast exponentiation: O(log n)
+
+6. COMBINATORICS:
+   - nCr = n! / (r! * (n-r)!)
+   - Pascal's Triangle for small values
+
+APPLICATIONS:
+- Cryptography (RSA)
+- Hashing
+- Random number generation
+- Competitive programming
+
+COMMON PROBLEMS:
+- Prime checking
+- Prime factorization
+- GCD/LCM
+- Modular exponentiation
+- Fibonacci (Matrix method)
+- Factorial
+- Combinations/Permutations
 """
 
 def gcd(a, b):

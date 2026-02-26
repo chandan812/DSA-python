@@ -1,5 +1,46 @@
 """
 TREES - Hierarchical Data Structure
+
+THEORY:
+- Non-linear hierarchical structure
+- Root node at top, children below
+- Each node has at most one parent
+- Nodes without children are leaves
+
+TERMINOLOGY:
+- Root: Top node (no parent)
+- Parent: Node with children
+- Child: Node with parent
+- Leaf: Node without children
+- Height: Longest path from node to leaf
+- Depth: Distance from root to node
+- Level: Depth + 1
+
+BINARY TREE:
+- Each node has at most 2 children (left, right)
+- Types: Full, Complete, Perfect, Balanced
+
+BINARY SEARCH TREE (BST):
+- Left subtree < Node < Right subtree
+- Enables O(log n) search in balanced tree
+- Degrades to O(n) if unbalanced
+
+TRAVERSALS:
+1. Inorder (Left-Root-Right) - Gives sorted order in BST
+2. Preorder (Root-Left-Right) - Copy tree
+3. Postorder (Left-Right-Root) - Delete tree
+4. Level Order (BFS) - Level by level
+
+TIME COMPLEXITY (Balanced BST):
+- Search: O(log n)
+- Insert: O(log n)
+- Delete: O(log n)
+
+APPLICATIONS:
+- File systems
+- Expression parsing
+- Database indexing
+- Huffman coding
 """
 
 class TreeNode:
