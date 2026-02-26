@@ -1,6 +1,31 @@
 """
 ARRAYS - Foundation of DSA
-Time Complexity: Access O(1), Search O(n), Insert/Delete O(n)
+
+THEORY:
+- Contiguous memory locations storing elements of same type
+- Fixed size (in static arrays), dynamic size (in Python lists)
+- Index-based access: O(1) time complexity
+- Sequential storage enables cache-friendly operations
+
+TIME COMPLEXITY:
+- Access: O(1) - Direct index access
+- Search: O(n) - Linear scan required
+- Insert/Delete at end: O(1) amortized
+- Insert/Delete at beginning/middle: O(n) - Shifting required
+
+SPACE COMPLEXITY: O(n)
+
+COMMON TECHNIQUES:
+1. Two Pointers - For searching pairs, reversing
+2. Sliding Window - For subarray problems
+3. Kadane's Algorithm - Maximum subarray sum
+4. Hashing - For O(1) lookups
+
+WHEN TO USE:
+- Need random access to elements
+- Fixed or predictable size
+- Cache-friendly sequential access
+- Simple data structure requirements
 """
 
 def reverse_array(arr):

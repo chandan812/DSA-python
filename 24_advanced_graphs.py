@@ -1,5 +1,46 @@
 """
 ADVANCED GRAPH ALGORITHMS
+
+THEORY:
+
+1. TARJAN'S SCC (Strongly Connected Components):
+   - Find SCCs in directed graph
+   - Uses DFS with low-link values
+   - Time: O(V+E)
+   - Single pass algorithm
+
+2. KOSARAJU'S SCC:
+   - Two-pass DFS algorithm
+   - First: Find finish times
+   - Second: DFS on transposed graph
+   - Time: O(V+E)
+
+3. ARTICULATION POINTS:
+   - Vertices whose removal increases components
+   - Critical nodes in network
+   - Time: O(V+E)
+   - Uses DFS with discovery/low times
+
+4. BRIDGES:
+   - Edges whose removal increases components
+   - Critical connections
+   - Time: O(V+E)
+
+5. NETWORK FLOW:
+   - Ford-Fulkerson: O(E * max_flow)
+   - Edmonds-Karp: O(VE²)
+   - Dinic's: O(V²E)
+
+APPLICATIONS:
+- SCC: Web graph analysis, recommendation systems
+- Articulation Points: Network reliability
+- Bridges: Critical infrastructure
+- Network Flow: Max matching, min cut
+
+CONCEPTS:
+- SCC: Maximal set where every vertex reaches every other
+- Cut Vertex: Removal disconnects graph
+- Bridge: Removal increases components
 """
 from collections import defaultdict, deque
 

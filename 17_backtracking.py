@@ -1,5 +1,52 @@
 """
 BACKTRACKING - Try all possibilities
+
+THEORY:
+- Brute force with pruning
+- Build solution incrementally
+- Abandon solution if it can't lead to valid answer
+- Uses recursion to explore all paths
+
+APPROACH:
+1. Choose - Make a choice
+2. Explore - Recursively explore with that choice
+3. Unchoose - Backtrack if doesn't work
+
+TEMPLATE:
+```
+def backtrack(path, choices):
+    if is_solution(path):
+        result.append(path)
+        return
+    for choice in choices:
+        if is_valid(choice):
+            make_choice(choice)
+            backtrack(path, remaining_choices)
+            undo_choice(choice)  # Backtrack
+```
+
+TIME COMPLEXITY: Often exponential O(b^d)
+- b = branching factor
+- d = depth
+
+OPTIMIZATION:
+- Pruning - Skip invalid branches early
+- Constraint propagation
+- Heuristics for choice ordering
+
+COMMON PROBLEMS:
+1. N-Queens - Place queens on chessboard
+2. Sudoku Solver - Fill grid with constraints
+3. Permutations - All arrangements
+4. Combinations - All selections
+5. Subset Sum - Find subset with target sum
+6. Word Search - Find word in grid
+7. Rat in Maze - Find path
+
+WHEN TO USE:
+- Need all solutions
+- Constraint satisfaction
+- Combinatorial problems
 """
 
 def n_queens(n):

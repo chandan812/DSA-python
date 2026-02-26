@@ -1,5 +1,46 @@
 """
 STRING ALGORITHMS - Pattern Matching
+
+THEORY:
+
+1. KMP (Knuth-Morris-Pratt):
+   - Efficient pattern matching
+   - Preprocessing: Build LPS (Longest Prefix Suffix) array
+   - Time: O(n+m) where n=text, m=pattern
+   - Space: O(m)
+   - No backtracking in text
+
+2. RABIN-KARP:
+   - Rolling hash for pattern matching
+   - Time: O(n+m) average, O(nm) worst
+   - Good for multiple pattern search
+   - Uses hashing
+
+3. Z-ALGORITHM:
+   - Finds all occurrences in linear time
+   - Z[i] = length of longest substring starting at i matching prefix
+   - Time: O(n+m)
+
+4. MANACHER'S ALGORITHM:
+   - Longest palindromic substring
+   - Time: O(n)
+   - Uses center expansion with optimization
+
+5. TRIE-BASED:
+   - Aho-Corasick for multiple patterns
+   - Suffix Tree/Array for advanced queries
+
+COMPARISON:
+- Naive: O(nm) - Simple but slow
+- KMP: O(n+m) - Best for single pattern
+- Rabin-Karp: O(n+m) - Good for multiple patterns
+- Boyer-Moore: O(n/m) best case - Fast in practice
+
+APPLICATIONS:
+- Text editors (find/replace)
+- DNA sequence matching
+- Plagiarism detection
+- Search engines
 """
 
 def kmp_search(text, pattern):

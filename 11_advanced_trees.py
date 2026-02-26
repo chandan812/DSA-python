@@ -1,5 +1,37 @@
 """
 ADVANCED TREES - AVL, Segment Tree
+
+THEORY:
+
+1. AVL TREE (Self-Balancing BST):
+   - Height balanced: |height(left) - height(right)| ≤ 1
+   - Maintains O(log n) operations
+   - Rotations: Left, Right, Left-Right, Right-Left
+   - More rigid than Red-Black trees
+   - Time: O(log n) for insert, delete, search
+
+2. SEGMENT TREE:
+   - Binary tree for range queries
+   - Each node stores aggregate info for range
+   - Build: O(n), Query: O(log n), Update: O(log n)
+   - Space: O(4n) = O(n)
+   - Use cases: Range sum, min, max, GCD
+
+3. FENWICK TREE (Binary Indexed Tree):
+   - Compact segment tree
+   - Space: O(n)
+   - Prefix sum queries and updates: O(log n)
+
+AVL ROTATIONS:
+- LL: Right rotation
+- RR: Left rotation  
+- LR: Left then Right
+- RL: Right then Left
+
+APPLICATIONS:
+- AVL: Database indexing, memory management
+- Segment Tree: Range queries in arrays
+- Fenwick: Cumulative frequency tables
 """
 
 class AVLNode:

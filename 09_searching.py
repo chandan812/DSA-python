@@ -1,5 +1,48 @@
 """
 SEARCHING ALGORITHMS
+
+THEORY:
+- Finding element in data structure
+- Linear vs Binary search trade-offs
+- Binary search requires sorted data
+
+1. LINEAR SEARCH:
+   - Check each element sequentially
+   - Time: O(n)
+   - Works on unsorted data
+   - Simple implementation
+
+2. BINARY SEARCH:
+   - Divide and conquer on sorted data
+   - Time: O(log n)
+   - Requires sorted array
+   - Eliminates half elements each iteration
+
+BINARY SEARCH VARIANTS:
+- First Occurrence - Find leftmost match
+- Last Occurrence - Find rightmost match
+- Count Occurrences - Last - First + 1
+- Search in Rotated Array - Modified binary search
+- Peak Element - Element greater than neighbors
+- Square Root - Binary search on answer
+
+TEMPLATE:
+```
+left, right = 0, n-1
+while left <= right:
+    mid = (left + right) // 2
+    if condition:
+        return mid
+    elif search_left:
+        right = mid - 1
+    else:
+        left = mid + 1
+```
+
+KEY POINTS:
+- Always check mid calculation (avoid overflow)
+- Decide search space reduction carefully
+- Handle edge cases (empty array, single element)
 """
 
 def linear_search(arr, target):

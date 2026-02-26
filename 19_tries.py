@@ -1,5 +1,48 @@
 """
 TRIE - Prefix Tree for efficient string operations
+
+THEORY:
+- Tree where each node represents a character
+- Root is empty, paths form words
+- Each node has up to 26 children (for lowercase)
+- Efficient for prefix-based operations
+
+STRUCTURE:
+- Node contains: children map, isEndOfWord flag
+- Common characters share paths
+- Space efficient for common prefixes
+
+OPERATIONS:
+- Insert: O(m) where m = word length
+- Search: O(m)
+- StartsWith: O(m)
+- Delete: O(m)
+
+SPACE COMPLEXITY: O(ALPHABET_SIZE * N * M)
+- N = number of words
+- M = average word length
+
+ADVANTAGES:
+- Fast prefix search
+- Autocomplete
+- Spell checking
+- No hash collisions
+
+DISADVANTAGES:
+- More space than hash table
+- Cache unfriendly
+
+APPLICATIONS:
+1. Autocomplete systems
+2. Spell checkers
+3. IP routing (longest prefix match)
+4. Dictionary implementation
+5. Word games (Boggle, Scrabble)
+
+VARIANTS:
+- Compressed Trie (Patricia Tree)
+- Suffix Trie
+- Ternary Search Tree
 """
 
 class TrieNode:
