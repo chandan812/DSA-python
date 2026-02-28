@@ -26,15 +26,23 @@ IMPORTANT PATTERNS:
 - Substring: Contiguous sequence of characters
 """
 
+# Reverse string using slicing
+# Time: O(n), Space: O(n)
 def reverse_string(s):
     return s[::-1]
 
+# Check if string is palindrome
+# Time: O(n), Space: O(n)
 def is_palindrome(s):
     return s == s[::-1]
 
+# Check if two strings are anagrams
+# Time: O(n log n), Space: O(n)
 def is_anagram(s1, s2):
     return sorted(s1) == sorted(s2)
 
+# Find first non-repeating character
+# Time: O(n), Space: O(n)
 def first_non_repeating(s):
     count = {}
     for char in s:
@@ -44,6 +52,9 @@ def first_non_repeating(s):
             return char
     return None
 
+# Longest substring without repeating characters
+# Time: O(n), Space: O(min(n, charset_size))
+# Uses sliding window technique
 def longest_unique_substring(s):
     char_set = set()
     left = max_len = 0
@@ -55,6 +66,8 @@ def longest_unique_substring(s):
         max_len = max(max_len, right - left + 1)
     return max_len
 
+# String compression (e.g., "aabccc" -> "a2b1c3")
+# Time: O(n), Space: O(n)
 def compress_string(s):
     if not s:
         return ""
@@ -70,6 +83,8 @@ def compress_string(s):
     compressed = ''.join(result)
     return compressed if len(compressed) < len(s) else s
 
+# Check if parentheses are balanced
+# Time: O(n), Space: O(n)
 def valid_parentheses(s):
     stack = []
     pairs = {'(': ')', '{': '}', '[': ']'}
@@ -80,9 +95,13 @@ def valid_parentheses(s):
             return False
     return len(stack) == 0
 
+# Reverse words in a string
+# Time: O(n), Space: O(n)
 def reverse_words(s):
     return ' '.join(s.split()[::-1])
 
+# Find longest common prefix among strings
+# Time: O(S) where S is sum of all characters, Space: O(1)
 def longest_common_prefix(strs):
     if not strs:
         return ""

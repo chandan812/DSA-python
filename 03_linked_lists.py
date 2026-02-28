@@ -46,6 +46,8 @@ class LinkedList:
     def __init__(self):
         self.head = None
     
+    # Insert at end of linked list
+    # Time: O(n), Space: O(1)
     def insert_at_end(self, data):
         new_node = Node(data)
         if not self.head:
@@ -56,11 +58,15 @@ class LinkedList:
             curr = curr.next
         curr.next = new_node
     
+    # Insert at beginning of linked list
+    # Time: O(1), Space: O(1)
     def insert_at_beginning(self, data):
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
     
+    # Delete node with given key
+    # Time: O(n), Space: O(1)
     def delete_node(self, key):
         curr = self.head
         if curr and curr.data == key:
@@ -73,6 +79,8 @@ class LinkedList:
         if curr:
             prev.next = curr.next
     
+    # Display linked list as string
+    # Time: O(n), Space: O(n)
     def display(self):
         elements = []
         curr = self.head
@@ -81,6 +89,8 @@ class LinkedList:
             curr = curr.next
         return " -> ".join(elements)
     
+    # Reverse linked list in-place
+    # Time: O(n), Space: O(1)
     def reverse(self):
         prev = None
         curr = self.head
@@ -91,6 +101,8 @@ class LinkedList:
             curr = next_node
         self.head = prev
     
+    # Detect cycle using Floyd's algorithm (fast & slow pointers)
+    # Time: O(n), Space: O(1)
     def detect_cycle(self):
         slow = fast = self.head
         while fast and fast.next:
@@ -100,6 +112,8 @@ class LinkedList:
                 return True
         return False
     
+    # Find middle element using fast & slow pointers
+    # Time: O(n), Space: O(1)
     def find_middle(self):
         slow = fast = self.head
         while fast and fast.next:
@@ -117,6 +131,8 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
     
+    # Insert at end of doubly linked list
+    # Time: O(n), Space: O(1)
     def insert_at_end(self, data):
         new_node = DNode(data)
         if not self.head:
@@ -128,6 +144,8 @@ class DoublyLinkedList:
         curr.next = new_node
         new_node.prev = curr
     
+    # Display doubly linked list
+    # Time: O(n), Space: O(n)
     def display(self):
         elements = []
         curr = self.head
