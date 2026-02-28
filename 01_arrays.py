@@ -28,6 +28,8 @@ WHEN TO USE:
 - Simple data structure requirements
 """
 
+# Reverse array in-place using two pointers
+# Time: O(n), Space: O(1)
 def reverse_array(arr):
     left, right = 0, len(arr) - 1
     while left < right:
@@ -36,11 +38,16 @@ def reverse_array(arr):
         right -= 1
     return arr
 
+# Rotate array right by k positions
+# Time: O(n), Space: O(n)
 def rotate_array(arr, k):
     n = len(arr)
     k = k % n
     return arr[-k:] + arr[:-k]
 
+# Maximum Subarray Sum - Kadane's Algorithm
+# Time: O(n), Space: O(1)
+# Returns maximum sum of contiguous subarray
 def max_subarray_sum(arr):
     max_sum = current_sum = arr[0]
     for num in arr[1:]:
@@ -48,6 +55,8 @@ def max_subarray_sum(arr):
         max_sum = max(max_sum, current_sum)
     return max_sum
 
+# Two Sum - Find indices of two numbers that add to target
+# Time: O(n), Space: O(n) using hash map
 def two_sum(arr, target):
     seen = {}
     for i, num in enumerate(arr):
@@ -56,6 +65,9 @@ def two_sum(arr, target):
         seen[num] = i
     return []
 
+# Remove duplicates from sorted array in-place
+# Time: O(n), Space: O(1)
+# Returns new length
 def remove_duplicates(arr):
     if not arr:
         return 0
@@ -66,6 +78,8 @@ def remove_duplicates(arr):
             arr[j] = arr[i]
     return j + 1
 
+# Merge two sorted arrays
+# Time: O(m+n), Space: O(m+n)
 def merge_sorted(arr1, arr2):
     result = []
     i = j = 0
@@ -80,9 +94,14 @@ def merge_sorted(arr1, arr2):
     result.extend(arr2[j:])
     return result
 
+# Find missing number in array [1..n]
+# Time: O(n), Space: O(1)
+# Uses sum formula: n*(n+1)/2
 def find_missing(arr, n):
     return n * (n + 1) // 2 - sum(arr)
 
+# Find leaders in array (elements greater than all to right)
+# Time: O(n), Space: O(n)
 def find_leaders(arr):
     leaders = []
     max_right = float('-inf')
