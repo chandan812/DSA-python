@@ -41,18 +41,26 @@ class Stack:
     def __init__(self):
         self.items = []
     
+    # Push element to top of stack
+    # Time: O(1), Space: O(1)
     def push(self, item):
         self.items.append(item)
     
+    # Pop element from top of stack
+    # Time: O(1), Space: O(1)
     def pop(self):
         return self.items.pop() if not self.is_empty() else None
     
+    # Peek at top element without removing
+    # Time: O(1), Space: O(1)
     def peek(self):
         return self.items[-1] if not self.is_empty() else None
     
     def is_empty(self):
         return len(self.items) == 0
 
+# Check if parentheses/brackets are balanced
+# Time: O(n), Space: O(n)
 def is_balanced(expression):
     stack = []
     pairs = {'(': ')', '{': '}', '[': ']'}
@@ -64,6 +72,8 @@ def is_balanced(expression):
                 return False
     return len(stack) == 0
 
+# Find next greater element for each element
+# Time: O(n), Space: O(n)
 def next_greater_element(arr):
     result = [-1] * len(arr)
     stack = []
@@ -75,6 +85,8 @@ def next_greater_element(arr):
         stack.append(arr[i])
     return result
 
+# Evaluate postfix expression
+# Time: O(n), Space: O(n)
 def evaluate_postfix(expression):
     stack = []
     for char in expression.split():
@@ -98,11 +110,15 @@ class MinStack:
         self.stack = []
         self.min_stack = []
     
+    # Push element and update minimum
+    # Time: O(1), Space: O(1)
     def push(self, val):
         self.stack.append(val)
         if not self.min_stack or val <= self.min_stack[-1]:
             self.min_stack.append(val)
     
+    # Pop element and update minimum
+    # Time: O(1), Space: O(1)
     def pop(self):
         if self.stack:
             val = self.stack.pop()
@@ -110,6 +126,8 @@ class MinStack:
                 self.min_stack.pop()
             return val
     
+    # Get minimum element in O(1)
+    # Time: O(1), Space: O(1)
     def get_min(self):
         return self.min_stack[-1] if self.min_stack else None
 

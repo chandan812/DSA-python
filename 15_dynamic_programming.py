@@ -43,6 +43,9 @@ KEY PROBLEMS:
 - Subset Sum, Partition
 """
 
+# Fibonacci using DP (Bottom-Up Tabulation)
+# Time: O(n), Space: O(n)
+# Returns nth Fibonacci number
 def fibonacci_dp(n):
     if n <= 1:
         return n
@@ -52,6 +55,9 @@ def fibonacci_dp(n):
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
 
+# Climbing Stairs - Count ways to reach nth stair (1 or 2 steps at a time)
+# Time: O(n), Space: O(n)
+# dp[i] = ways to reach ith stair
 def climbing_stairs(n):
     if n <= 2:
         return n
@@ -61,6 +67,9 @@ def climbing_stairs(n):
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
 
+# Coin Change - Minimum coins needed to make amount
+# Time: O(amount * coins), Space: O(amount)
+# dp[i] = min coins to make amount i
 def coin_change(coins, amount):
     dp = [float('inf')] * (amount + 1)
     dp[0] = 0
@@ -70,6 +79,9 @@ def coin_change(coins, amount):
                 dp[i] = min(dp[i], dp[i - coin] + 1)
     return dp[amount] if dp[amount] != float('inf') else -1
 
+# Longest Increasing Subsequence - Length of longest strictly increasing subsequence
+# Time: O(n²), Space: O(n)
+# dp[i] = length of LIS ending at index i
 def longest_increasing_subsequence(arr):
     if not arr:
         return 0
@@ -80,6 +92,9 @@ def longest_increasing_subsequence(arr):
                 dp[i] = max(dp[i], dp[j] + 1)
     return max(dp)
 
+# Longest Common Subsequence - Length of longest common subsequence
+# Time: O(m*n), Space: O(m*n)
+# dp[i][j] = LCS length of s1[0..i-1] and s2[0..j-1]
 def longest_common_subsequence(s1, s2):
     m, n = len(s1), len(s2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
@@ -91,6 +106,9 @@ def longest_common_subsequence(s1, s2):
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
     return dp[m][n]
 
+# 0/1 Knapsack - Maximum value with weight capacity constraint
+# Time: O(n*capacity), Space: O(n*capacity)
+# dp[i][w] = max value using first i items with weight w
 def knapsack_01(weights, values, capacity):
     n = len(weights)
     dp = [[0] * (capacity + 1) for _ in range(n + 1)]
@@ -102,6 +120,9 @@ def knapsack_01(weights, values, capacity):
                 dp[i][w] = dp[i-1][w]
     return dp[n][capacity]
 
+# Edit Distance (Levenshtein) - Minimum operations to convert s1 to s2
+# Operations: insert, delete, replace
+# Time: O(m*n), Space: O(m*n)
 def edit_distance(s1, s2):
     m, n = len(s1), len(s2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
@@ -117,6 +138,9 @@ def edit_distance(s1, s2):
                 dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
     return dp[m][n]
 
+# Maximum Subarray Sum (Kadane's Algorithm)
+# Time: O(n), Space: O(1)
+# Returns maximum sum of contiguous subarray
 def max_subarray_sum(arr):
     max_sum = curr_sum = arr[0]
     for num in arr[1:]:
@@ -124,6 +148,9 @@ def max_subarray_sum(arr):
         max_sum = max(max_sum, curr_sum)
     return max_sum
 
+# House Robber - Maximum money without robbing adjacent houses
+# Time: O(n), Space: O(n)
+# dp[i] = max money robbing up to house i
 def house_robber(arr):
     if not arr:
         return 0
